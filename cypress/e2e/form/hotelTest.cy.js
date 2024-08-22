@@ -1,6 +1,6 @@
 import invalidData from '../../fixtures/invalidData.json';
 import validData from '../../fixtures/validData.json';
-describe('Enviar mensaje', { testIsolation: false }, () => {
+describe('Enviar mensaje', () => {
     beforeEach(() => {
         cy.visit('https://automationintesting.online/');
         cy.clearAllLocalStorage();
@@ -9,6 +9,7 @@ describe('Enviar mensaje', { testIsolation: false }, () => {
     });
     it('Validar envío de form vacío', () => {
         cy.log('Envío de form de contacto en blanco...');
+        // cy.title().should('eq','R')
         cy.get('.col-sm-7 > .btn').click();
         cy.get(':nth-child(4) > .rbc-row-bg > :nth-child(2)').should('be.visible').wait(1000);
         cy.get(':nth-child(4) > .rbc-row-bg > :nth-child(6)').should('be.visible').wait(1000).scrollIntoView();
@@ -23,7 +24,7 @@ describe('Enviar mensaje', { testIsolation: false }, () => {
             errors.emptyFormErrors.forEach((errorMessage) => {
                 cy.completP(errorMessage);});});
     });
-    it.skip('Validar envío de form con data incorrecta', () => {
+    it('Validar envío de form con data incorrecta', () => {
         cy.log('Set de datos incorrectos...');
         cy.fillFormFromJsonFile('invalidData.json');
          cy.get('[data-testid="ContactDescription"]').type('asdasd');
@@ -35,7 +36,7 @@ describe('Enviar mensaje', { testIsolation: false }, () => {
             });
         });
     });
-    it.skip('Validar envío de form con data correcta', () => {
+    it('Validar envío de form con data correcta', () => {
         cy.log('Set de datos correctos...');
         cy.get('.img-responsive').should('be.visible');
         cy.fillFormFromJsonFile('validData.json');
