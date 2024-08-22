@@ -1,0 +1,11 @@
+{"dat": {
+   "error1":"Subject must be between 5 and 100 characters.",
+   "error2": "Subject may not be blank",
+   "error3": "Name may not be blank",
+   "error4": "Message must be between 20 and 2000 characters.",
+   "error5": "Message may not be blank",
+   "error6": "Email may not be blank",
+   "error7": "Phone may not be blank",
+   "error8": "Phone must be between 11 and 21 characters."}
+
+}
