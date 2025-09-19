@@ -1,0 +1,32 @@
+
+
+{
+  "validUser": {
+    "razonSocial": "Empresa Valid777 SA",
+    "cuit": "27345678901",
+    "direccion": "Calle 77",
+    "telefono": "3517654321",
+    "email": "valido7@empresa.com",
+    "password": "SecurePass123!",
+    "confirmPassword": "SecurePass123!"
+  },
+  "invalidEmail": {
+    "razonSocial": "Empresa7 Test",
+    "cuit": "20345678901",
+    "direccion": "Test 123",
+    "telefono": "3511111111",
+    "email": "email-invalido",
+    "password": "Password123!",
+    "confirmPassword": "Password123!"
+  },
+  "mismatchedEmails": {
+    "razonSocial": "Empresa Tes7t",
+    "cuit": "20345678901",
+    "direccion": "Test 123",
+    "telefono": "3511111111",
+    "email": "uno@email.com",
+    "confirmEmail": "otro@email.com",
+    "password": "Password123!",
+    "confirmPassword": "Password123!"
+  }
+}

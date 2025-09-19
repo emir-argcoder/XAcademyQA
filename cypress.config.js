@@ -1,11 +1,7 @@
-const { defineConfig } = require("cypress");
-
-module.exports = defineConfig({
-  projectId: "joejqs",
+module.exports = {
   e2e: {
-    video:true,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
   },
-});
+};
