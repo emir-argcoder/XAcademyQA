@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "cypress": "^15.2.0",
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.7.4"
+  }
+}
