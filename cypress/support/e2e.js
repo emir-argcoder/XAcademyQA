@@ -14,8 +14,19 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
-import '@4tw/cypress-drag-drop';
+import './comandosLogin'
+import './comandosRestablecimiento'
+
+/*Cypress.on('window:before:load', (win) => {
+  if (win.navigator && win.navigator.serviceWorker) {
+    win.navigator.serviceWorker.getRegistrations().then((regs) => {
+      regs.forEach((reg) => reg.unregister());
+    });
+  }
+});*/
+
+// evita que errores de la app corten el test de apertura
+//Cypress.on('uncaught:exception', () => false);
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

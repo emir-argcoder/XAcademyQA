@@ -1,0 +1,77 @@
+{
+  "casoVálido": {
+    "título":"CP001 - Iniciar sesión",
+    "email": "Ongdaince@teleworm.us",
+    "contraseña": "@MLOko98711",
+    "resultadoEsperado":"Se debería iniciar sesión",
+    "asserts": "https://vps-3696213-x.dattaweb.com/"
+  },
+  "casosInválidos": [
+    {
+      "título": "CP002 - Intentar iniciar sesión con usuario no verificado",
+      "email": "Alted1949@teleworm.us",
+      "contraseña": "lp89KJH!@",
+      "resultadoEsperado":"No se debería iniciar sesión",
+      "asserts": "Usuario no confirmado"
+    },
+    {
+      "título": "CP003 - Intentar iniciar sesión con email y contraseña inválidos",
+      "email": "nouser@example.com",
+      "contraseña": "P@ssw0rd!",
+      "resultadoEsperado":"No se debería iniciar sesión",
+      "asserts": "Correo o contraseña incorrectos"
+    },
+    {
+      "título": "CP004 - Intentar iniciar sesión con email inválido.",
+      "email": "ngdaince@teleworm.us",
+      "contraseña": "@MLOko98711",
+      "resultadoEsperado":"No se debería iniciar sesión",
+      "asserts": "Correo o contraseña incorrectos"
+    },
+    {
+      "título": "CP005 - Intentar iniciar sesión con campo email vacío.",
+      "email": "",
+      "contraseña": "@MLOko98711",
+      "resultadoEsperado":"No se debería iniciar sesión",
+      "asserts": [
+        "Completa este campo",
+        "Correo o contraseña incorrectos"
+      ]
+    },
+    {
+      "título": "CP006 - Intentar iniciar sesión con contraseña inválida.",
+      "email": "Ongdaince@teleworm.us",
+      "contraseña": "@MLOko98722",
+      "resultadoEsperado":"No se debería iniciar sesión",
+      "asserts": "Correo o contraseña incorrectos"
+    },
+    {
+      "título": "CP007 - Intentar iniciar sesión con campo contraseña vacío.",
+      "email": "Ongdaince@teleworm.us",
+      "contraseña": "",
+      "resultadoEsperado":"No se debería iniciar sesión",
+      "asserts": [
+        "Completa este campo",
+        "Correo o contraseña incorrectos"
+      ]
+    },
+    {
+      "título": "Test exploratorio - Intentar iniciar sesión de una cuenta no verificada con campo contraseña vacío.",
+      "email": "Rourt1985@dayrep.com",
+      "contraseña": "",
+      "resultadoEsperado":"No se debería iniciar sesión",
+      "asserts": [
+        "Completa este campo",
+        "Correo o contraseña incorrectos"
+      ]
+    },
+    {
+      "título": "CP008 - Intentar iniciar sesión con campos email y contraseña vacíos.",
+      "email": "",
+      "contraseña": "",
+      "resultadoEsperado":"No se debería iniciar sesión",
+      "asserts": "Correo o contraseña incorrectos"
+    }
+
+  ]
+}

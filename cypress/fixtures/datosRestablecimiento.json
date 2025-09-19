@@ -1,0 +1,82 @@
+{
+  "casosVálidos": [
+  {
+    "título":"CP001 - Acceder a la pantalla inicial de restablecimiento de contraseña desde la pantalla del login.",
+    "tipoCaso":"Positivo",
+    "resultadoEsperado":"Se deberìa redireccionar a la pantalla inicial de restablecimiento de contraseña.",
+    "asserts": [
+       "url.restablecer",                                                                
+       "restablecer.campoEmail",
+       "restablecer.botonEnviar"
+     ]
+  },
+  {
+    "título":"CP002 - Validar email para iniciar flujo de restablecimento",
+    "tipoCaso":"Positivo",
+    "email":"testingda84@gmail.com",
+    "resultadoEsperado":"El sistema debería enviar el link de restablecimiento al email registrado.",
+    "asserts":"se ha enviado un correo"
+  },
+  {
+    "título":"CP003 - Acceder a la pantalla de restablecimiento de contraseña(generación y guardado de la nueva contraseña)",
+    "tipoCaso":"Positivo",
+    "resultadoEsperado":"Se deberia visualizar en pantalla el formulario de restablecimento de contraseña con los campos Nueva contraseña, Confirmar contraseña y botón Confirmar.",
+    "asserts": [
+       "url.restablecerConfirmacion",
+       "restablecerConfirmacion.campoNuevaContraseña",
+       "restablecerConfirmacion.campoConfirmarContraseña",
+       "restablecerConfirmacion.botonGuardar"
+    ]
+   },
+  {
+    "título":"CP004 - Restablecer contraseña",
+    "tipoCaso":"Positivo",
+    "nuevaContraseña":"lioP45-67M@",
+    "cofirmarContraseña":"lioP45-67M@",
+    "resultadoEsperado":"Se debería guarda la nueva contraseña.",
+    "asserts":"contraseña actualizada correctamente"
+  }
+ ],
+  "casosInválidos": [
+    {
+      "título": "CP005 - Intentar comenzar flujo de restablecimiento de contraseña utilizando email inválido.",
+      "tipoCaso":"Negativo",
+      "email": "wdpjfszg@sharklasers,com",
+      "resultadoEsperado":"El sistema no debería permitir avanzar con el flujo de restablecimiento.",
+      "asserts": "El correo electrónico no es válido"
+    },
+    {
+      "título": "CP006 - Intentar comenzar flujo de restablecimiento de contraseña utilizando email no registrado.",
+      "tipoCaso":"Negativo",
+      "email": "Stkñ1als1971@dayrep.com",
+      "resultadoEsperado":"El sistema no debería permitir avanzar con el flujo de restablecimiento.",
+      "asserts": "Usuario incorrecto"
+    },
+    {
+      "título": "CP007 - Intentar comenzar flujo de restablecimiento de contraseña utilizando email no de usuario no verificado.",
+      "tipoCaso":"Negativo",
+      "email": "Houree31@armyspy.com",
+      "resultadoEsperado":"El sistema no debería permitir avanzar con el flujo de restablecimiento.",
+      "asserts": "Usuario incorrecto"
+    },
+    {
+      "título": "CP009 - Intentar guardar nueva contraseña ingresando Nueva contraseña inválida.",
+      "tipoCaso":"Negativo",
+      "email":"testingda84@gmail.com",
+      "nuevaContraseña": "MLOkooopllm",
+      "confirmarContraseña":"MLOkooopllm",
+      "resultadoEsperado":"El sistema no debería guardar la nueva contraseña.",
+      "asserts":"La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos."
+    },
+    {
+      "título": "CP0010 - Intentar guardar nueva contraseña ingresando Nueva contraseña y Confirmar contraseña distintas.",
+      "tipoCaso":"Negativo",
+      "email":"testingda84@gmail.com",
+      "nuevaContraseña": "MLOk@22opllm",
+      "confirmarContraseña":"MLOk@42opllm",
+      "resultadoEsperado":"El sistema no debería guardar la nueva contraseña.",
+      "asserts": "Las contraseñas no coinciden"
+    }
+    
+  ]
+}
