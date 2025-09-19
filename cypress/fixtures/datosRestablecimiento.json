@@ -43,12 +43,12 @@
       "tipoCaso":"Negativo",
       "email": "wdpjfszg@sharklasers,com",
       "resultadoEsperado":"El sistema no debería permitir avanzar con el flujo de restablecimiento.",
-      "asserts": "El correo electrónico no es válido"
+      "asserts": "El texto después del signo @ no debe incluir el símbolo ,"
     },
     {
       "título": "CP006 - Intentar comenzar flujo de restablecimiento de contraseña utilizando email no registrado.",
       "tipoCaso":"Negativo",
-      "email": "Stkñ1als1971@dayrep.com",
+      "email": "testp3235@gmail.com",
       "resultadoEsperado":"El sistema no debería permitir avanzar con el flujo de restablecimiento.",
       "asserts": "Usuario incorrecto"
     },
