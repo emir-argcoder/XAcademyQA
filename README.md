@@ -4,7 +4,7 @@ Esta suite de pruebas automatizadas fue diseñada para verificar dos funcionalid
 
 El código de automatización se implementó con Cypress y se utilizó ChatGPT-5 como herramienta de apoyo para la generación y estructuración de los scripts.
 
-##2 . Requisitos y configuración
+## 2 . Requisitos y configuración
 Para poder ejecutar estas pruebas, es necesario tener instalado lo siguiente:
 
 Node.js: La versión 12 o superior.
@@ -19,7 +19,7 @@ npm install
 A. Login
 Verifica que solo los usuarios con credenciales válidas y verificadas puedan acceder al sistema, bloqueando cualquier intento de acceso indebido.
 
-###Flujo principal:
+### Flujo principal:
 
 CP001: Inicio de sesión exitoso con usuario y contraseña correctos. El sistema redirige a la URL principal, confirma el acceso y cierra sesión.
 
