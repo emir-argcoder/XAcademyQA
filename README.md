@@ -16,7 +16,7 @@ Para la configuración inicial, navega al directorio del proyecto y ejecuta el s
 npm install
 
 ## 3. Funcionalidades bajo prueba
-A. Login
+### A. Login
 Verifica que solo los usuarios con credenciales válidas y verificadas puedan acceder al sistema, bloqueando cualquier intento de acceso indebido.
 
 ### Flujo principal:
