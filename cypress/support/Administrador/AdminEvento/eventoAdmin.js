@@ -150,7 +150,7 @@ export class EventoAdminn {
      * En caso que no lo sea, se tomara la primer coincidencia
      * @param {string} textoUnico
      * @returns {Cypress.Chainable<JQuery<HTMLElement>>} La fila que contiene el texto unico
-     * @param {string} nuevoEstado cambia el estado del usuario al que se le pasa el texto unico
+     * @param {string} nuevoEstado cambia el estado del evento al que se le pasa el texto unico
      * estados posibles: Pendiente, Aprobado, Rechazado
      */
     cambiarEstadoDeEventoPorTexto(textoUnico, nuevoEstado) {

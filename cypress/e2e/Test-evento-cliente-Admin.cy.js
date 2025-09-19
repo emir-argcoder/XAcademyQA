@@ -16,10 +16,20 @@ describe('Tareas relacionadas con el admin', () => {
     admin.clickButtonLogin();
   })
 
+  /**
+   * Para la ejecucion de Happy Path se deben tener en cuenta los siguientes datos:
+   * TC-001: El evento se creara con el estado "Creado"
+   * 1-Buscamos el nombre del evento @param {string} textoUnico (hardcodeado en el test ingresariamos el
+   nombre del evento creado por la compañera)
+   * 2-@param {string} nuevoEstado cambia el estado del evento a "Aprobado"
+   * 3-Aceptamos el modal de confirmacion
+   * 4-Verificamos en la grilla de "Aprobado" que se encuentre el evento
+   * 5-ingresar con credenciales de cliente creador del evento para completar sus respectivos pasos
+  **/
 
-  it('TC-001: En Creado, buscar nombre del evento X → cambiar a Rechazado → verificar en Rechazado si se encuentra el evento X', () => {
+  it.only('TC-001: En Creado, buscar nombre del evento X → cambiar a Aprobado → verificar en Aprobado si se encuentra el evento X', () => {
     //Nombre del Evento: F90
-    //Cambiar estado Creado → Rechazado
+    //Cambiar estado Creado → Aprobado
     cy.get('[type="button').eq(1).click();
     cy.wait(1000)
     evento.clickAdminEventos();
@@ -27,11 +37,11 @@ describe('Tareas relacionadas con el admin', () => {
     evento.bttnCreado().click();
     cy.wait(2000);
     //evento.cambiarEstadoDeEventoPorTexto('🎉💀ñ@#', 'Rechazado');
-    evento.cambiarEstadoDeEventoPorTexto('Ado Hibana', 'Rechazado');
+    evento.cambiarEstadoDeEventoPorTexto('Ado Hibana', 'Aprobado');
     cy.wait(2000)
     evento.clickModalAceptar();
     cy.wait(2000)
-    evento.bttnRechazado().click();
+    evento.bttnAprobado().click();
     evento.verificarTextoEnGrilla('Ado Hibana');
   });
 
@@ -66,25 +76,35 @@ describe('Tareas relacionadas con el admin', () => {
     evento.clickModalCancelar();
     cy.wait(2000)
     evento.verificarTextoEnGrilla('Grupo 7');
-  }); 
+  });
 
-   it('TC-001: En Pendiente, buscar cliente por Nombre X → cambiar a Rechazado → verificar en Rechazado si se encuentra el cliente X.', () => {
+  /**
+   * Mismo procedimiento que el Happy Path pero con clientes
+   * TC-001: El cliente se creara con el estado "Pendiente"
+   * 1-Buscamos el nombre del cliente @param {string} textoUnico (hardcodeado en el test ingresariamos el nombre del cliente creado por la compañera), en caso que existan varios clientes con el mismo nombre, se tomara el primero que aparezca, o se puede buscar por identificador unico como el CUIT
+   * 2-@param {string} nuevoEstado cambia el estado del cliente a "Aprobado"
+   * 3-Aceptamos el modal de confirmacion
+   * 4-Verificamos en la grilla de "Aprobado" que se encuentre el cliente
+   * 5-ingresar con credenciales de cliente creador del evento para completar sus respectivos pasos
+   */
+
+  it.only('TC-001: En Pendiente, buscar cliente por Nombre X → cambiar a Aprobado → verificar en Aprobado si se encuentra el cliente X.', () => {
     cy.get('[type="button').eq(1).click();
     cy.wait(1000)
     cliente.clickAdminClientes();
     cy.wait(6000);
     cliente.bttnPendiente().click();
     cy.wait(1000)
-    cliente.cambiarEstadoDeClientePorTexto('yeyaTester S.A', 'Rechazado');
+    cliente.cambiarEstadoDeClientePorTexto('yeyaTester S.A', 'Aprobado');
     cy.wait(1000)
     cliente.clickModalAceptar();
     cy.wait(4000);
-    cliente.bttnRechazado().click();
+    cliente.bttnAprobado().click();
     cy.wait(4000)// 4 segundos para que trabaje la api
     cliente.verificarTextoEnGrilla('rulycisnero@gmail.com');
-  }); 
+  });
 
-   it('TC-002: En Rechazado, buscar cliente por Email X → cambiar a Aprobado → verificar en Aprobado si se encuentra el cliente X.', () => {
+  it('TC-002: En Rechazado, buscar cliente por Email X → cambiar a Aprobado → verificar en Aprobado si se encuentra el cliente X.', () => {
     cy.get('[type="button').eq(1).click();
     cy.wait(1000)
     cliente.clickAdminClientes();
@@ -109,7 +129,7 @@ describe('Tareas relacionadas con el admin', () => {
     cy.wait(1000)
     cliente.clickModalCancelar();
   });
- 
+
   it('devuelvo al cliente su estado inicial', () => {
     cy.get('[type="button').eq(1).click();
     cy.wait(1000)
