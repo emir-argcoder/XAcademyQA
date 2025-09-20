@@ -17,6 +17,8 @@ Las pruebas automatizadas cubren los siguientes escenarios:
   - ✅ Éxito en el registro de un nuevo usuario con datos válidos.
   - ✅ Verificación de la visualización de mensajes de error y éxito.
 
+Casos de Pruebas ejecutados: https://docs.google.com/spreadsheets/d/1sll2ZCthMX3CrdwaYsiqeHbAanNNUILEOiTLAeLF49k/edit?gid=1725890393#gid=1725890393
+
 -----
 
 ## 🛠️ Tecnologías Utilizadas
@@ -24,36 +26,6 @@ Las pruebas automatizadas cubren los siguientes escenarios:
   - **Cypress**: Framework de pruebas E2E.
   - **JavaScript**: Lenguaje de programación.
   - **Visual Studio Code**: Editor de código.
-
------
-
-## ⚙️ Configuración del Entorno
-
-Sigue estos pasos para configurar y ejecutar las pruebas en tu máquina local:
-
-### 1\. Requisitos Previos
-
-Asegúrate de tener instalado **Node.js** en tu sistema. Puedes verificarlo con el siguiente comando en tu terminal:
-
-```bash
-node -v
-npm -v
-```
-
-### 2\. Clonar el Repositorio
-
-```bash
-git clone https://github.com/nombre-de-usuario/nombre-del-repositorio.git
-cd nombre-del-repositorio
-```
-
-### 3\. Instalar Dependencias
-
-Instala todas las dependencias del proyecto:
-
-```bash
-npm install
-```
 
 -----
 
