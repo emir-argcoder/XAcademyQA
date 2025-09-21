@@ -1,4 +1,7 @@
 #  Suite de pruebas automatizadas - Grupo 7
+## Integrantes del equipo:
+Gonzalo Benavidez, Emir Samsam, Rebeca Fernández, Raul Cisnero, Luis Alberto Rodriguez, Estefania Vago, Veronica Cochrane, Diana Alcaraz.
+
 ## 1. Visión general del proyecto
 Esta suite de pruebas automatizadas fue diseñada para validar la funcionalidad integral de la aplicación Ticketazo desde la perspectiva de diferentes usuarios. El objetivo principal es asegurar la estabilidad, seguridad y calidad del sistema en sus flujos clave, desde el registro de usuarios hasta la gestión y compra de eventos.
 
