@@ -15,7 +15,7 @@
 //
 // -- This is a child command --
 
-import '@4tw/cypress-drag-drop';
+//import '@4tw/cypress-drag-drop';
 
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
