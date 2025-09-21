@@ -1,6 +1,6 @@
-#  Suite de pruebas automatizadas
+#  Suite de pruebas automatizadas - Grupo 7
 ## 1. Visión general del proyecto
-Esta suite de pruebas automatizadas fue diseñada para validar la funcionalidad integral de la aplicación tiketazo desde la perspectiva de diferentes usuarios. El objetivo principal es asegurar la estabilidad, seguridad y calidad del sistema en sus flujos clave, desde el registro de usuarios hasta la gestión y compra de eventos.
+Esta suite de pruebas automatizadas fue diseñada para validar la funcionalidad integral de la aplicación Ticketazo desde la perspectiva de diferentes usuarios. El objetivo principal es asegurar la estabilidad, seguridad y calidad del sistema en sus flujos clave, desde el registro de usuarios hasta la gestión y compra de eventos.
 
 El código de automatización fue implementado con Cypress y utiliza Node.js y npm como base.
 
@@ -55,5 +55,6 @@ npx cypress open: Este comando abre la interfaz de usuario de Cypress, donde pue
 npx cypress run: Este comando ejecuta todos los tests en la línea de comandos de forma automática.
 
 ## Link a documentación del proyecto:
-Matriz de casos de prueba: https://docs.google.com/spreadsheets/d/1sll2ZCthMX3CrdwaYsiqeHbAanNNUILEOiTLAeLF49k/edit?gid=1528370784#gid=1528370784
-Tablero de Trello: https://trello.com/b/Yb8oPnBj/grupo-7
+-Matriz de casos de prueba: https://docs.google.com/spreadsheets/d/1sll2ZCthMX3CrdwaYsiqeHbAanNNUILEOiTLAeLF49k/edit?gid=1528370784#gid=1528370784
+
+-Tablero de Trello: https://trello.com/b/Yb8oPnBj/grupo-7
