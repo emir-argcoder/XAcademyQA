@@ -1,21 +1,16 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-
 import '@4tw/cypress-drag-drop';
+
+Cypress.Commands.add('login', (user = Cypress.env('LOGIN_USER'), pass = Cypress.env('LOGIN_PASS')) => {
+    cy.viewport(1280, 800)
+
+    cy.visit('https://vps-3696213-x.dattaweb.com/auth/login')
+
+    cy.get('[data-cy="input-email"]').clear().type(user)
+    cy.get('[data-cy="input-password"]').clear().type(pass)
+    cy.get('[data-cy="btn-login"]').click()
+
+    cy.url({ timeout: 10000 }).should('not.include', '/auth/login')
+})
 
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
@@ -25,9 +20,9 @@ Cypress.Commands.add('completP', (paragraph) => {
 
 Cypress.Commands.add('inputPlaceH', (placeholder, value) => {
     cy.get(`input[placeholder="${placeholder}"]`)
-      .should('be.visible')   // Verifica que el campo esté visible
-      .clear()                // Limpia el campo antes de ingresar el valor
-      .type(value);           // Ingresa el valor
+        .should('be.visible')   // Verifica que el campo esté visible
+        .clear()                // Limpia el campo antes de ingresar el valor
+        .type(value);           // Ingresa el valor
 });
 
 // Comando para completar el formulario desde un archivo JSON
@@ -100,7 +95,7 @@ Cypress.Commands.add('dragAndDrop', (subject, target) => {
                             force: true
                         })
                         .wait(500)
-                        .trigger('mouseup', {force: true});
+                        .trigger('mouseup', { force: true });
                 });
         });
 });
